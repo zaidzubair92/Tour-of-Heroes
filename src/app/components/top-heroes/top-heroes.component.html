@@ -1,0 +1,9 @@
+<h2>{{ title }}</h2>
+
+<!-- Only display the top 4 heroes -->
+<span *ngFor="let hero of heroesToDisplay">
+    <button 
+        [title]="hero.name"
+        [routerLink]="['/edit', hero.id]">{{ hero.name }}
+    </button>
+</span>

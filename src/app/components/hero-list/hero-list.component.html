@@ -1,0 +1,11 @@
+<h2>My Heroes</h2>
+<div *ngFor="let hero of heroes">
+    {{ hero.id }} - <button (click)="setHeroName(hero)">{{ hero.name }}</button>
+</div>
+
+<div *ngIf="getHeroName(); let hero">
+    {{ hero.name }} is my hero!
+    <div>
+        <a [routerLink]="['/edit', hero.id]" [queryParams]="{hero: hero | json }">View Details</a>
+    </div>
+</div>

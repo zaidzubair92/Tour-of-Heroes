@@ -1,0 +1,6 @@
+<h2>{{ heroName }} details</h2>
+<div>
+    <label>Id:</label><h1>{{ hero.id }}</h1>
+    <label>Name:</label><input value="{{ hero.name }}" (input)="onNameChange($event.target.value)"/>
+</div>
+<a class="LinkButton" routerLink="/" (click)="saveNewName(heroName, hero.id)">Back</a>
